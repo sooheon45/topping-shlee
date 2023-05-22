@@ -1,0 +1,27 @@
+forEach: BoundedContext
+fileName: pom.xml
+path: {{name}}/.
+---
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <version>2.3.1</version>
+  </parent>
+</project>
+
+<function>
+  window.$HandleBars.registerHelper('replaceName', function (name) {
+    try{
+      if(!name)
+        return;
+
+      if(name.includes(" ")){
+        name = name.replaceAll(" ", "-")
+      }
+
+      return name
+    } catch(e){
+    console.log(e)
+    }
+    });
+</function>
