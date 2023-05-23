@@ -1,5 +1,6 @@
 path: {{name}}/{{{options.packagePath}}}
 fileName: {{namePascalCase}}Application.java
+ifDuplicated: merge
 ---
 package {{options.package}};
 import {{options.package}}.config.kafka.KafkaProcessor;
