@@ -13,8 +13,12 @@ ifDuplicated: merge
   </properties>
   <dependencies>
     <dependency>
-      <groupId>org.springframework.boot2</groupId>
-      <artifactId>spring-boot-starter-data-jpa2</artifactId>
+      <groupId>org.springframework.boot-lee</groupId>
+      <artifactId>spring-boot-starter-data-jpa-lee</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-hateoas-lee</artifactId>
     </dependency>
   </dependencies>
 </project>
