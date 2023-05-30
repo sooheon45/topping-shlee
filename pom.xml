@@ -14,12 +14,12 @@ ifDuplicated: merge
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot-lee</groupId>
-      <artifactId_isKey>spring-boot-starter-data-jpa</artifactId_isKey>
+      <artifactId isKey>spring-boot-starter-data-jpa</artifactId_isKey>
       <version>10.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId_isKey>spring-boot-starter-hateoas</artifactId_isKey>
+      <artifactId isKey>spring-boot-starter-hateoas</artifactId_isKey>
       <version>10.0.0</version>
     </dependency>
   </dependencies>
