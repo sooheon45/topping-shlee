@@ -19,7 +19,7 @@ ifDuplicated: merge
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
-      <artifactId>isKey spring-boot-starter-hateoas</artifactId>
+      <artifactId isKey="true">spring-boot-starter-hateoas</artifactId>
       <version>10.0.0</version>
     </dependency>
   </dependencies>
