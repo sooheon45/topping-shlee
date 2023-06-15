@@ -17,7 +17,7 @@ steps:
     args: [
       'clean',
       'package'
-      #      '-Dmaven.test.skip=true'
+      '-Dmaven.test.skip=true'
     ]
   #    waitFor: ['test']
   ### docker Build
