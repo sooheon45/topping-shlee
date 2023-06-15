@@ -16,7 +16,7 @@ steps:
     name: 'gcr.io/cloud-builders/mvn-lee'
     args: [
       'clean',
-      'package'
+      'package',
       '-Dmaven.test.skip=true'
     ]
   #    waitFor: ['test']
