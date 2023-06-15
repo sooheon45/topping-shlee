@@ -1,5 +1,7 @@
 forEach: BoundedContext
 fileName: cloudbuild.yaml
+path: {{name}}/.
+ifDuplicated: merge
 ---
 steps:
   ### Test
