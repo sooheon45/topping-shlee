@@ -14,11 +14,11 @@ steps:
     ]
   ### Test  
   - id: 'test'
-     name: 'gcr.io/cloud-builders/mvn'
-     args: [
+    name: 'gcr.io/cloud-builders/mvn'
+    args: [
        'test',
        '-Dspring.profiles.active=test'
-     ]
+    ]
   ### Publish
   - id: 'publish'
     name: 'gcr.io/cloud-builders/docker'
