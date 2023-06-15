@@ -12,8 +12,8 @@ steps:
       'package',
       '-Dmaven.test.skip=true'
     ]
-  ### Test
-   - id: 'test'
+  ### Test  
+  - id: 'test'
      name: 'gcr.io/cloud-builders/mvn'
      args: [
        'test',
