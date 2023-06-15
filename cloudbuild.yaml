@@ -2,6 +2,14 @@ forEach: BoundedContext
 fileName: cloudbuild.yaml
 ---
 steps:
+  ### Test
+  #  - id: 'test'
+  #    name: 'gcr.io/cloud-builders/mvn'
+  #    args: [
+  #      'test',
+  #      '-Dspring.profiles.active=test'
+  #    ]
+  ### Build
   - id: 'build'
     name: 'gcr.io/cloud-builders/mvn-lee'
     args: [
@@ -12,14 +20,22 @@ steps:
   #    waitFor: ['test']
   ### docker Build
   - id: 'docker build'
-    name: 'gcr.io/cloud-builders/docker-lee'
+    name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
       - '--tag=gcr.io/$PROJECT_ID/$_PROJECT_NAME:latest'
       - '.'
+  ### Publish
+  - id: 'publish'
+    name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        docker push gcr.io/$PROJECT_ID/$_PROJECT_NAME:latest
   ### deploy
   - id: 'deploy'
-    name: 'gcr.io/cloud-builders/gcloud-lee'
+    name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: 'bash'
     args:
       - '-c'
